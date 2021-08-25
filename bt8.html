@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 Bài tập 8</title>
+</head>
+<body>
+<h1>Game guess number:</h1>
+<p>Choose your number and chill:</p>
+<button onclick="startgame()">Click</button>
+
+<script>
+    function startgame() {
+        let inputMax = prompt("Enter Max: ");
+        let max = parseInt(inputMax)
+        let inputMin = prompt("Enter Min: ");
+        let min = parseInt(inputMin);
+        let value = Math.floor(Math.random() * (max - min) + min);
+        let num;
+        let i = 0;
+
+        do {
+            num = parseInt(prompt("Enter your Number: "));
+            if (num < value) {
+                alert("Smaller, Renter number: ");
+            } else if (num > value) {
+                alert("Bigger, Renter number: ");
+            }
+            i++
+        } while (num !== value && i < 3)
+
+        if (num === value) {
+            alert("Bingo, Congrat!");
+        } else {
+            alert("Wrong!");
+        }
+    }
+</script>
+</body>
+</html>

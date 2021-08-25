@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập for1 Bài tập 2:</title>
+</head>
+<body>
+<h1>Nhập nhiệt độ:</h1>
+<script>
+    let temperature = prompt("Enter temperature")
+    do {
+        if (temperature < 20) {
+            temperature = prompt("Increase Temparature")
+        } else if (temperature > 100) {
+            temperature = prompt("Reduce Temparature")
+        }
+    } while (temperature < 20 || temperature > 100);
+   alert("Your temparature is: " + temperature);
+</script>
+</body>
+</html>

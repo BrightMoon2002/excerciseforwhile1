@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy số Fibonacci</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fn;
+    document.write("1" + "<br>")
+    for (i = 1; i < 20; i++) {
+        fn = a + b;
+        a = b;
+        b = fn;
+        document.write(fn + "<br>")
+    }
+</script>
+</body>
+</html>
